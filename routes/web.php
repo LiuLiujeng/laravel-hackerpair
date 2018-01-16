@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('events/{id}/', 'EventsController@show')->name('events.show');
 
 // New route method in Laravel 5.5
 // Route::view('/', 'welcome.index');
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'WelcomeController@index')->name('welcome.index');
+
