@@ -11,6 +11,8 @@
 |
 */
 
+// New route method in Laravel 5.5
+// Route::view('/', 'welcome.index');
 Route::get('/', function () {
     $languages = [
         'Perl',
@@ -18,7 +20,7 @@ Route::get('/', function () {
         'Python',
     ];
     Log::debug($languages);
-
     Debugbar::error('This is a testing: Something is definitely going wrong.');
+
     return view('welcome.index');
 });
