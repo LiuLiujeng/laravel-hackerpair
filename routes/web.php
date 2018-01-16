@@ -13,14 +13,4 @@
 
 // New route method in Laravel 5.5
 // Route::view('/', 'welcome.index');
-Route::get('/', function () {
-    $languages = [
-        'Perl',
-        'PHP',
-        'Python',
-    ];
-    Log::debug($languages);
-    Debugbar::error('This is a testing: Something is definitely going wrong.');
-
-    return view('welcome.index');
-});
+Route::get('/', 'WelcomeController@index');
