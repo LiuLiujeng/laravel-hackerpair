@@ -17,6 +17,8 @@ Route::get('/', function () {
         'PHP',
         'Python',
     ];
-    \Log::debug($languages);
-    return view('welcome');
+    Log::debug($languages);
+
+    Debugbar::error('This is a testing: Something is definitely going wrong.');
+    return view('welcome.index');
 });
